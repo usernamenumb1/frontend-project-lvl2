@@ -6,3 +6,5 @@ install: # ботва для создания воспроизводимой с�
 	npm ci
 test: # запускает тесты
 	npx jest .
+test-coverage: # покрытие тестами
+	npm test -- --coverage --coverageProvider=v8
