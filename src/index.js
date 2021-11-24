@@ -22,13 +22,14 @@ const compare = (obj1, obj2) => {
       res[`+ ${key}`] = obj2[key];
     }
   });
-  return res;
+  return JSON.stringify(res);
 };
 
 const genDiff = (ftree, stree) => {
   const firstTree = JSON.parse(readFile(ftree));
   const secondTree = JSON.parse(readFile(stree));
   console.log(compare(firstTree, secondTree));
+  return compare(firstTree, secondTree);
 };
 
 export default genDiff;
