@@ -19,12 +19,14 @@
   "homepage": "https://github.com/usernamenumb1/frontend-project-lvl2#readme",
   "dependencies": {
     "commander": "^8.3.0",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^1.0.3",
     "eslint": "^8.3.0",
     "eslint-config-airbnb": "^19.0.0",
     "eslint-plugin-import": "^2.25.3",
