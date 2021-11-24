@@ -17,5 +17,9 @@ test('gendiff/yaml', () => {
   const file1 = getFixturePath('file1.yml');
   const file2 = getFixturePath('file2.yml');
   expect(genDiff(file1, file2)).toEqual('{"- follow":false,"  host":"hexlet.io","- proxy":"123.234.53.22","- timeout":50,"+ timeout":20,"+ verbose":true}');
-  expect(genDiff()).not.toEqual('{"- follow":false,"  host":"hexlet.io","- proxy":"123.234.53.22","- timeout":50,"+ timeout":20,"+ verbose":true}');
+});
+test('gendiff/different extention', () => {
+  const file1 = getFixturePath('file1.txt');
+  const file2 = getFixturePath('file2.txt');
+  expect(() => genDiff(file1, file2)).toThrow(Error);
 });
