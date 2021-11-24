@@ -1,4 +1,4 @@
-name: linter
+name: linter & test
 on: push
 jobs:
   my-job:
@@ -16,6 +16,8 @@ jobs:
       - name: npm install
         run: |
           make install
+        run: |
+          make test
         env:
           CI: true  
       - name: Run Linter
