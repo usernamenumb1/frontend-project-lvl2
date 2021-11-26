@@ -5,6 +5,6 @@ lint: # запускает линтер
 install: # ботва для создания воспроизводимой сборки 
 	npm ci
 test: # запускает тесты
-	npx jest .
+	npm test .
 test-coverage: # покрытие тестами
 	npm test -- --coverage --coverageProvider=v8

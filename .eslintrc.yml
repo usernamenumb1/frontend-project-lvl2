@@ -1,5 +1,3 @@
-plugins:
-  - jest
 env:
   node: true
   es2020: true
