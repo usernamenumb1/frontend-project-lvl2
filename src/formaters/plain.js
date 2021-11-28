@@ -18,7 +18,7 @@ const plain = (arr) => {
         case 'updated':
           return `Property '${parent}' was updated. From ${stringify(item.val1)} to ${stringify(item.val2)}`;
         case 'recursion':
-          return `${iter(item.val, parent).join('\n')}`;
+          return `${iter(item.children, parent).join('\n')}`;
         default:
           throw new Error(`Not existed type: ${node.type}`);
       }

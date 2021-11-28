@@ -11,7 +11,7 @@ const addType = (obj1, obj2) => {
         return { type: 'same', key, val: value2 };
       }
       if (_.isObject(obj2[key]) && _.isObject(obj1[key])) {
-        return { type: 'recursion', key, val: addType(value1, value2) };
+        return { type: 'recursion', key, children: addType(value1, value2) };
       }
       return {
         type: 'updated', key, val1: value1, val2: value2,
