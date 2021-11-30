@@ -2,8 +2,8 @@ import _ from 'lodash';
 
 const addType = (obj1, obj2) => {
   const arrkeys = Object.keys({ ...obj1, ...obj2 });
-  const keys = _.sortBy(arrkeys);
-  return keys.map((key) => {
+  const sortkeys = _.sortBy(arrkeys);
+  return sortkeys.map((key) => {
     const value1 = obj1[key];
     const value2 = obj2[key];
     if (_.has(obj2, key) && _.has(obj1, key)) {

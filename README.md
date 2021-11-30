@@ -4,3 +4,24 @@
 ### Codeclimate:
 [![Maintainability](https://api.codeclimate.com/v1/badges/51af18d88b0b1051acc1/maintainability)](https://codeclimate.com/github/usernamenumb1/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/51af18d88b0b1051acc1/test_coverage)](https://codeclimate.com/github/usernamenumb1/frontend-project-lvl2/test_coverage)
+
+### Вычислитель отличий
+Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения которой существует множество онлайн сервисов, например http://www.jsondiff.com/. Подобный механизм используется при выводе тестов или при автоматическом отслеживании изменении в конфигурационных файлах.
+
+### Возможности утилиты:
+Поддержка разных входных форматов: yaml, json Генерация отчета в виде plain text, stylish и json
+
+### Установка
+1. Установите Node.js последней версии в систему глобально (Установка JavaScript).
+2. Склонируйте созданный репозиторий проекта локально.
+3. Выполнить установку зависимостей (make install)
+4. Запустить сравнение файлов (команды в описании)
+
+### Описание
+Вычислить различия можно с помощью команды
+
+gendiff [options] pathToFile1 pathToFile2
+
+Options: -V, --version output the version number -f, --format [type] Output format -h, --help output usage information
+
+[type] - plain, json, stylish - путь к json или yaml файлам
