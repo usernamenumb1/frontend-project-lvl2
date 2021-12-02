@@ -25,3 +25,9 @@ gendiff [options] pathToFile1 pathToFile2
 Options: -V, --version output the version number -f, --format [type] Output format -h, --help output usage information
 
 [type] - plain, json, stylish - путь к json или yaml файлам
+
+### Примеры работы:
+[![asciicast](https://asciinema.org/a/r3pY0ScVXwsYFnFii1Ld6F8BP.svg)](https://asciinema.org/a/r3pY0ScVXwsYFnFii1Ld6F8BP)
+[![asciicast](https://asciinema.org/a/p91GlHBIrGh2PeczJ1MW33UHT.svg)](https://asciinema.org/a/p91GlHBIrGh2PeczJ1MW33UHT)
+[![asciicast](https://asciinema.org/a/wtt3HZzXNzL15orsoJdwy56p9.svg)](https://asciinema.org/a/wtt3HZzXNzL15orsoJdwy56p9)
+[![asciicast](https://asciinema.org/a/onRxLZXNvO2zMiVjgCyGjLwSH.svg)](https://asciinema.org/a/onRxLZXNvO2zMiVjgCyGjLwSH)
