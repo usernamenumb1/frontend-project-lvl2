@@ -27,7 +27,7 @@ const stylish = (arr) => {
         return getString('- ', item.val);
       case 'updated':
         return `${getString('- ', item.val1)}\n${getString('+ ', item.val2)}`;
-      case 'recursion':
+      case 'node':
         return `${emptySpace}${item.key}: {\n${iter(item.children, depth + 1).join('\n')}\n${emptySpace}}`;
       default:
         throw new Error(`Not existed type: ${node.type}`);

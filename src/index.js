@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import parse from './parse.js';
-import addType from './addType.js';
-import formater from './formaters/index.js';
+import findDiff from './findDiff.js';
+import formater from './formatters/index.js';
 
 const readFile = (filename) => fs.readFileSync(path.resolve(process.cwd(), filename.trim()), 'utf-8');
 
@@ -13,7 +13,7 @@ const genDiff = (filepath1, filepath2, format = 'stylish') => {
   const extention2 = path.extname(filepath2);
   const firstTree = parse(extention1, data1);
   const secondTree = parse(extention2, data2);
-  const typed = addType(firstTree, secondTree);
+  const typed = findDiff(firstTree, secondTree);
   return formater(typed, format);
 };
 
