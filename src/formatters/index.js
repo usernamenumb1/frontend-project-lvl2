@@ -1,15 +1,13 @@
+import _ from 'lodash';
 import stylish from './stylish.js';
 import plain from './plain.js';
 
 export default (coll, format) => {
-  switch (format) {
-    case 'stylish':
-      return stylish(coll);
-    case 'plain':
-      return plain(coll);
-    case 'json':
-      return JSON.stringify(coll);
-    default:
-      throw new Error(`Output format ${format} not exist`);
-  }
+  const formatsMap = {
+    stylish: () => stylish(coll),
+    plain: () => plain(coll),
+    json: () => JSON.stringify(coll),
+  };
+  if (!_.has(formatsMap, format)) throw new Error(`Output format ${format} not exist`);
+  return formatsMap[format]();
 };

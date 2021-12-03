@@ -10,18 +10,13 @@ const plain = (arr) => {
     .filter((item) => item.type !== 'same')
     .map((item) => {
       const parent = acc ? `${acc}.${item.key}` : item.key;
-      switch (item.type) {
-        case 'added':
-          return `Property '${parent}' was added with value: ${stringify(item.val)}`;
-        case 'removed':
-          return `Property '${parent}' was removed`;
-        case 'updated':
-          return `Property '${parent}' was updated. From ${stringify(item.val1)} to ${stringify(item.val2)}`;
-        case 'node':
-          return `${iter(item.children, parent).join('\n')}`;
-        default:
-          throw new Error(`Not existed type: ${node.type}`);
-      }
+      const typesMap = {
+        added: () => `Property '${parent}' was added with value: ${stringify(item.val)}`,
+        removed: () => `Property '${parent}' was removed`,
+        updated: () => `Property '${parent}' was updated. From ${stringify(item.val1)} to ${stringify(item.val2)}`,
+        node: () => `${iter(item.children, parent).join('\n')}`,
+      };
+      return typesMap[item.type]();
     });
   return `${iter(arr, '').join('\n')}`;
 };
